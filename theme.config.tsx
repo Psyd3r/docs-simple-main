@@ -1,5 +1,7 @@
 import React from "react";
 import {Image} from 'nextra/components'
+import {useTheme} from "next-themes";
+import Imagem from "next/image";
 
 const config = {
   logo: <span>Simple Agro</span>,

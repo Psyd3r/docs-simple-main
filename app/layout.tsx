@@ -5,13 +5,16 @@ import "nextra-theme-docs/style.css";
 import "./globals.css";
 import logotest from "../../../image/lg-digital.png"
 import Image from 'next/image'
+import {useTheme} from "next-themes";
+
+
 
 export const metadata = {
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 };
 
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>;
+const banner = <Banner storageKey="some-key">Docs 1.0 is released 🎉</Banner>;
 const navbar = (
   <Navbar
     logo={
