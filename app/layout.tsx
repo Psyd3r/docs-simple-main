@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: any) {
   return (
     <html
       // Not required, but good for SEO
-      lang="en"
+      lang="pt-br"
       // Required to be set
       dir="ltr"
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
@@ -60,6 +60,7 @@ export default async function RootLayout({ children }: any) {
       </Head>
       <body>
         <Layout
+        // i18n={[{name: 'pt-BR', locale: 'pt-BR' }]}
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}

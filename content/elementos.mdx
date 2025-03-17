@@ -1,0 +1,107 @@
+import { FileTree } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { CiBoxes } from "react-icons/ci";
+import { FaPaintRoller, FaArchive } from "react-icons/fa";
+import { MdDirectionsBike } from "react-icons/md";
+import { BsAndroid2 } from "react-icons/bs";
+import { IoLogoAppleAppstore } from "react-icons/io5";
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Table } from 'nextra/components'
+import { Tabs } from 'nextra/components'
+
+ 
+## Árvore de Arquivos
+
+<FileTree>
+  <FileTree.Folder name="content" defaultOpen>
+    <FileTree.File name="_meta.js" />
+    <FileTree.File name="contact.md" />
+    <FileTree.File name="index.mdx" />
+    <FileTree.Folder name="about">
+      <FileTree.File name="_meta.js" />
+      <FileTree.File name="legal.md" />
+      <FileTree.File name="index.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+
+## Cartões
+
+<Cards>
+  <Cards.Card
+    icon={<IoLogoAppleAppstore />}
+    title="iOS"
+    href=""
+  />
+  <Cards.Card
+    icon={<FaArchive />}
+    title="Arquivos"
+    href=""
+  />
+    <Cards.Card
+    icon={<BsAndroid2 />}
+    title="Android"
+    href=""
+  />
+</Cards>
+
+## Avisos
+
+<Callout emoji="👽">
+  Este é um aviso **personalizado**.
+</Callout>
+
+<Callout type="info" emoji="ℹ️">
+  Hoje não é sexta-feira.
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+  Esta API será descontinuada em breve.
+</Callout>
+
+<Callout type="error" emoji="️🚫">
+  Essa é uma característica perigosa que pode fazer tudo explodir..
+</Callout>
+
+## Passo a passo
+<Steps>
+### Este é o primeiro passo
+ 
+Esta é a descrição do primeiro passo.
+ 
+### Este é o segundo passo
+
+Esta é a descrição do segundo passo.
+
+</Steps>
+
+## Tabela
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Coluna 1</Table.Th>
+      <Table.Th>Coluna 2</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>Tópico 1</Table.Td>
+      <Table.Td>Informação 1</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Tópico 2</Table.Td>
+      <Table.Td>Informação 2</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+## Abas
+
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tabs.Tab>**pnpm**: Fast, disk space efficient package manager.</Tabs.Tab>
+  <Tabs.Tab>**npm** is a package manager for the JavaScript programming language.</Tabs.Tab>
+  <Tabs.Tab>**Yarn** is a software packaging system.</Tabs.Tab>
+</Tabs>

@@ -3,10 +3,16 @@ import { LuRocket } from "react-icons/lu"
 import { FaBookBookmark } from "react-icons/fa6";
 import Image from 'next/image'
 import { LuLayoutPanelLeft } from "react-icons/lu";
-
+import { FaAlignLeft } from "react-icons/fa";
 
 
 export default {  
+  elementos:(
+    <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+    <FaAlignLeft style={{marginRight:'3px'}} />
+    <h1 style={{display: 'inline-block'}}>Elementos</h1>
+  </div>
+  ),
   index: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <LuRocket style={{marginRight:'3px'}} />
@@ -25,6 +31,7 @@ export default {
       <h1>Menus</h1>
       </div>
     ),
+    
 
     
   }
