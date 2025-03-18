@@ -19,7 +19,7 @@ const navbar = (
   <Navbar
     logo={
       <>
-      <Image src="/lg-digital.png" alt="Logo" width={190} height={100} />
+      <Image src="/lg-digital-light.png" alt="Logo" width={195} height={100} />
       </>
     }
     projectLink="https://gitlab.com/users/sign_in"
@@ -66,6 +66,8 @@ export default async function RootLayout({ children }: any) {
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
           footer={footer}
+          feedback={{ content: <></> }}
+          editLink={<></>}
           // ... Your additional layout options
         >
           {children}

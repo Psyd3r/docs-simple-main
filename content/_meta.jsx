@@ -7,31 +7,35 @@ import { FaAlignLeft } from "react-icons/fa";
 
 
 export default {  
-  elementos:(
-    <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-    <FaAlignLeft style={{marginRight:'3px'}} />
-    <h1 style={{display: 'inline-block'}}>Elementos</h1>
-  </div>
-  ),
   index: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <LuRocket style={{marginRight:'3px'}} />
-        <h1 style={{display: 'inline-block'}}>Getting Started</h1>
+        <h1 style={{display: 'inline-block'}}>Começando</h1>
       </div>
     ),
+    
     guide: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <FaBookBookmark style={{marginRight:'3px'}} />
-        <h1 style={{display: 'inline-block'}}>User Guide</h1>
+        <h1 style={{display: 'inline-block'}}>Guia</h1>
       </div>
     ),
+
+    separator1: {type: 'separator'},
+    
     paineis:(
       <div style={{display: 'flex', alignItems: 'center', gap:'8px'}}>
       <LuLayoutPanelLeft style={{marginRight: '3px'}}/>
       <h1>Menus</h1>
       </div>
     ),
-    
+    elementos:(
+      <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+      <FaAlignLeft style={{marginRight:'3px'}} />
+      <h1 style={{display: 'inline-block'}}>Elementos</h1>
+    </div>
+    ),
+
 
     
   }

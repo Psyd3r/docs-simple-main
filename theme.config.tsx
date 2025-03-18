@@ -6,12 +6,12 @@ import Imagem from "next/image";
 const config = {
   logo: <span>Simple Agro</span>,
   project: {
-    link: "https://github.com/shuding/nextra-docs-template",
+    link: "",
   },
   chat: {
     link: "https://discord.com",
   },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  docsRepositoryBase: "",
   footer: {
     text: "Simple Agro Docs",
   },
