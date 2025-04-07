@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import { FaAlignLeft } from "react-icons/fa";
 import { GrMoney } from "react-icons/gr";
-
+ 
 
 
 export default {  

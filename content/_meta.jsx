@@ -1,42 +1,73 @@
 import { FaHome, FaPlus } from 'react-icons/fa'
 import { LuRocket } from "react-icons/lu"
-import { FaBookBookmark } from "react-icons/fa6";
+import { FaBookBookmark, FaLocationDot  } from "react-icons/fa6";
 import Image from 'next/image'
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import { FaAlignLeft } from "react-icons/fa";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import { TiShoppingCart } from "react-icons/ti";
+
 
 
 export default {  
+  elementos:(
+    <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+    <FaAlignLeft style={{marginRight:'3px'}} />
+    <h1 style={{display: 'inline-block'}}>Elementos</h1>
+  </div>
+  ),
   index: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <LuRocket style={{marginRight:'3px'}} />
-        <h1 style={{display: 'inline-block'}}>Começando</h1>
+        <h1 style={{display: 'inline-block'}}>Comece aqui!</h1>
       </div>
     ),
     
     guide: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <FaBookBookmark style={{marginRight:'3px'}} />
-        <h1 style={{display: 'inline-block'}}>Guia</h1>
+        <h1 style={{display: 'inline-block'}}>Guia do usuário</h1>
       </div>
     ),
 
     separator1: {type: 'separator'},
-    
-    paineis:(
+    sales:(
+      <div style={{display: 'flex', alignItems: 'center', gap:'8px'}}>
+      <TiShoppingCart style={{marginRight: '3px'}}/>
+      <h1>Sales</h1>
+      </div>
+    ),
+
+    paineisSales:(
       <div style={{display: 'flex', alignItems: 'center', gap:'8px'}}>
       <LuLayoutPanelLeft style={{marginRight: '3px'}}/>
       <h1>Menus</h1>
       </div>
     ),
-    elementos:(
+    
+    separator2: {type: 'separator'},
+
+    field:(
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-      <FaAlignLeft style={{marginRight:'3px'}} />
-      <h1 style={{display: 'inline-block'}}>Elementos</h1>
+      <FaLocationDot style={{marginRight:'3px'}} />
+      <h1 style={{display: 'inline-block'}}>Field</h1>
     </div>
     ),
-
-
     
+    paineisField:(
+      <div style={{display: 'flex', alignItems: 'center', gap:'8px'}}>
+      <LuLayoutPanelLeft style={{marginRight: '3px'}}/>
+      <h1>Menus</h1>
+      </div>
+    ),
+
+  separator3: {type: 'separator'},
+
+    suporte:(
+      <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+      <MdOutlineSupportAgent style={{marginRight:'3px'}} />
+      <h1 style={{display: 'inline-block'}}>Suporte</h1>
+    </div>
+    ),
   }
 
