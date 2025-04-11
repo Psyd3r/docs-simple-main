@@ -1,1 +1,104 @@
-gyufyu
+import { Callout } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { TiShoppingCart } from "react-icons/ti";
+import { FaBookBookmark, FaLocationDot  } from "react-icons/fa6";
+import { MdOutlineSettings } from "react-icons/md";
+import { VscTools } from "react-icons/vsc";
+import { Steps } from 'nextra/components'
+
+
+## Guia do Usuário
+
+Este guia foi criado para ajudar você a utilizar todos os recursos do sistema de forma simples, segura e eficiente.
+
+---
+
+### Estrutura Geral do Sistema
+
+Nosso sistema está dividido em módulos especializados que cobrem diferentes etapas da operação:
+
+- **Sales**: Gestão de pedidos, clientes, comissões e entregas.  
+- **Field**: Controle de áreas de plantio, visitas, planejamento e recebimento de sementes.  
+
+<Callout type="info" emoji="📊">
+**Dica:** Os relatórios estão localizados dentro de cada módulo e são acessíveis via menu lateral. Eles ajudam na visualização e análise dos dados operacionais.
+</Callout>
+
+---
+
+### Bases do Sistema: Entendendo os Ambientes
+
+É comum nos referirmos a **bases** do sistema. Veja o que cada uma significa:
+
+| Ambiente        | Finalidade                                                                 |
+|------------------|----------------------------------------------------------------------------|
+| **Produção**      | Base oficial com dados reais. Tudo o que for inserido aqui é operacional. |
+| **Homologação**   | Ambiente para testes, validação de funcionalidades e treinamentos.         |
+
+---
+
+### Acessos e Permissões
+
+Cada usuário possui um nível de acesso que define quais menus e ações ele pode executar:
+
+- O administrador do sistema cadastra os usuários e define seus perfis.  
+- Os acessos controlam o que pode ser visualizado ou alterado: leitura, edição, criação ou exclusão.  
+- Exemplo de perfis: Vendedor, Coordenador Técnico, Administrativo, Responsável de Campo.
+
+<Callout type="warning" emoji="🔒">
+Se você não conseguir visualizar algum menu ou função, entre em contato com o responsável pela gestão de usuários da sua empresa.
+</Callout>
+
+---
+
+### Boas Práticas de Uso
+
+- **Evite duplicar cadastros** (ex: clientes, áreas de plantio, culturas). Utilize os filtros de busca.  
+- **Confirme a base antes de iniciar**: não insira dados reais em ambientes de teste.  
+- **Use os filtros e relatórios** para gerar análises seguras.  
+- **Sempre salve antes de sair de uma tela**.  
+- **Fique atento aos status de pedidos, entregas e visitas**.
+
+---
+
+### Termos e Conceitos Comuns
+
+| Termo                  | Significado                                                                 |
+|------------------------|------------------------------------------------------------------------------|
+| **Pedido**             | Venda formal registrada no módulo Sales.                                     |
+| **Área de Plantio**    | Registro de talhões e lavouras na fazenda ou cooperado.                      |
+| **Campanha/Safra**     | Período definido para vendas e planejamento agrícola.                         |
+| **Licença**            | Permissão operacional para realizar vendas por região ou cultura.            |
+| **Incorporação**       | Vínculo entre cliente e revenda para operação dentro da campanha vigente.    |
+
+---
+
+### Como obter ajuda
+
+- Acesse a aba [**Suporte**](#) para saber como abrir chamados via Jira ou contatar nossa equipe via WhatsApp em caso de urgência.  
+- Consulte o [**FAQ**](#) para soluções rápidas de dúvidas comuns.  
+- Veja os **passo a passos** nas páginas específicas de cada módulo para detalhes operacionais.
+
+---
+
+## Próximos Passos
+
+Explore os guias práticos de cada módulo. Clique em um card para acessar diretamente a seção desejada:
+
+<Cards>
+  <Cards.Card
+    icon={<TiShoppingCart />}
+    title="Sales"
+    href=""
+  />
+  <Cards.Card
+    icon={<FaLocationDot />}
+    title="Field"
+    href="http://localhost:3000/guide"
+  />
+   <Cards.Card
+      icon={<VscTools />}
+      title="Permissões e Perfis"
+      href=""
+      />
+</Cards>

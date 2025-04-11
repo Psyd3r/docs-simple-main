@@ -1,24 +1,149 @@
-import Image from "next/Image";
-import alo from "../../image/aloalo.png";
-import { ImageZoom } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { IoWarningOutline } from "react-icons/io5";
+
+
+## Criação de Chamados no Jira
+
+Bem-vindo(a)! Nesta seção, você aprenderá como abrir, detalhar e acompanhar seus chamados no Jira de forma simples e objetiva. Siga os passos abaixo para garantir que seu chamado seja registrado corretamente, agilizando o suporte e a resolução.
 
 
 
-# "Como abrir um chamado?"
+### 1. Acesso ao Jira
+<Steps>
+#### Abra o link do Jira
+Acesse: [https://jira.simpleagro.com.br/servicedesk/customer/user/login](https://jira.simpleagro.com.br/servicedesk/customer/user/login)
+#### Faça login
+Insira seu usuário (e-mail corporativo) e senha.
+Clique em Entrar.
+</Steps>
 
-## 1. Introdução
-Este documento tem como objetivo orientar os usuários na criação de chamados no sistema Jira. As instruções incluem os passos necessários para acessar o sistema, preencher as informações do chamado e acompanhar o andamento até sua resolução. Imagens serão apresentadas ao longo do documento para facilitar a compreensão.
 
-## 2. Acesso ao Jira
+<Callout emoji="💡">
+**Dica:** Caso não se lembre da senha, use a opção de recuperação ou contate o administrador para suporte.
+</Callout>
 
-Este documento tem como objetivo orientar os usuários na criação de chamados no sistema Jira. As instruções incluem os passos necessários para acessar o sistema, preencher as informações do chamado e acompanhar o andamento até sua resolução. Imagens serão apresentadas ao longo do documento para facilitar a compreensão.
-*  Insira suas credencias de login:
-*  Usuário: E-mail corporativo.
-* Senha: A mesma utilizada para acessar o sistema.
+---
 
-## 3. Clique no botão Entrar no Sistema.
+### 2. Selecionando o Centro de Serviço
 
-  <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
-  <ImageZoom src={alo} alt="Tela de clientes" width={600} height={500} />
-</div>
+Assim que fizer login, você será direcionado(a) para o Painel Inicial do Jira.
+
+<Steps>
+### 1. Escolha o centro de serviço “Suporte ao Cliente”  
+
+### 2. Selecione o projeto ao qual o chamado está relacionado por exemplo, se sua demanda é referente a “Sales” ou “Field”, escolha o projeto adequado.  
+
+</Steps>
+Você será encaminhado para a tela de criação de chamados, onde poderá detalhar sua solicitação.
+
+---
+
+### 3. Criando o Chamado
+
+Ao chegar na página de criação de chamados, preencha os campos da seguinte forma:
+
+<Steps>
+### Tipo de Chamado  
+   - Escolha entre as opções disponíveis (ex.: *Bug*, *Solicitação de Serviço*, *Melhoria*, etc.).  
+
+### Resumo 
+   - Insira um título breve e claro, que represente o problema ou solicitação.  
+   - Exemplo: “Erro ao cadastrar novo pedido” ou “Solicitação de novo relatório”.
+
+### Descrição  
+   - Explique **passo a passo** como o problema ocorreu ou o que você precisa.  
+   - Se houver erro, informe o comportamento esperado versus o comportamento atual.  
+   - Quanto mais detalhes, melhor! Assim nossa equipe consegue reproduzir e entender o cenário.
+
+### Urgência e Impacto 
+   - **Prioridade (Urgência)**: Selecione entre Muito Baixa, Baixa, Média, Alta, Muito Alta ou Crítica.  
+   - **Impacto**:  
+     - **Não impede operação**  
+     - **Impede operação com saída de contorno**  
+     - *Impede operação sem saída de contorno**
+   - Se for um problema que interrompe totalmente seu trabalho, escolha os níveis mais altos.
+
+### Anexos  
+   - **Adicione capturas de tela**, documentos ou registros de log que possam ilustrar o problema.  
+   - Arquivos extras aceleram a triagem e a resolução.
+</Steps>
+
+<details>
+<summary>Exemplo de Preenchimento</summary>
+
+**Resumo:**  
+Erro ao tentar salvar novo cliente no módulo Sales
+
+**Descrição:**  
+1. Acesso o menu “Clientes” no módulo Sales.  
+2. Clico em “Novo Cliente” e preencho todos os campos.  
+3. Ao clicar em “Salvar”, recebo uma mensagem de erro “Ocorreu um problema ao salvar”.
+
+**Comportamento Esperado:**  
+O sistema salva o cliente e retorna para a tela de listagem.
+
+**Comportamento Atual:**  
+Exibe uma mensagem de erro sem detalhes sobre o problema.
+
+**Prioridade:** Alta (Impacta diretamente o cadastro de clientes).  
+**Impacto:** Impede operação com saída de contorno (não consigo cadastrar clientes, mas posso usar planilha externa temporariamente).
+
+**Anexos:**  
+Capturas de tela do erro + logs do navegador em anexo.
+</details>
+
+---
+
+### 4. Enviando o Chamado
+
+Assim que preencher todos os campos:
+<Steps>
+### Revise as informações  
+   - Verifique se o resumo e a descrição estão corretos e completos.  
+   - Confirme a prioridade e o impacto antes de enviar.
+
+### Clique em “Criar”  
+   - O sistema exibirá um número de identificação (ex.: `SASD-1234`).  
+   - Guarde este número para acompanhar a evolução do chamado.
+</Steps>
+
+<Callout emoji="📧" type='info'>
+Você também receberá um e-mail de confirmação. Se não receber, verifique sua caixa de SPAM ou confirme se o e-mail está cadastrado corretamente no Jira.
+</Callout>
+
+---
+
+### 5. Acompanhando seu Chamado
+
+Para verificar o status ou atualizar informações do seu chamado:
+
+1. **Acesse o menu “Minhas solicitações”** no painel inicial do Jira.  
+2. **Use o campo de busca** para localizar o chamado pelo código ou resumo.  
+3. **Clique no chamado** para ver o status, comentários e anexos.  
+4. Se necessário, adicione mais detalhes ou responda a comentários da equipe de suporte.
+
+
+<Callout  emoji={<IoWarningOutline />} >
+  **Importante:** Responda prontamente às solicitações de mais informações. Isso agiliza o atendimento e evita que o chamado fique parado.
+</Callout>
+
+
+---
+
+### Boas Práticas
+
+- **Detalhe o máximo possível**: Ao abrir o chamado, inclua contexto, prints de tela e passos para reproduzir.  
+- **Evite criar chamados duplicados**: Caso alguém já tenha aberto um chamado semelhante, comente no chamado existente para concentrar as informações.  
+- **Priorize corretamente**: Se o problema é urgente e afeta toda a operação, selecione prioridade Alta ou Crítica. Se for apenas uma dúvida ou melhoria não urgente, selecione prioridade Baixa ou Média.  
+- **Fique de olho na caixa de e-mail**: Você pode receber notificações de andamento ou pedidos de mais detalhes.
+
+---
+
+### Conclusão
+
+Seguindo esses passos, você garante que seu chamado seja criado com clareza e que nossa equipe receba as informações necessárias para investigar e resolver sua solicitação rapidamente. Caso ainda tenha dúvidas sobre o processo de abertura de chamados, entre em contato com o suporte ou consulte a nossa [Seção de Suporte](#) para mais orientações.
+
+Boa sorte e conte sempre com a gente!
+
 

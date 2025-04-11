@@ -1,3 +1,9 @@
 .nextra-breadcrumb-icon {
     margin-right: 8px; /* Ajuste esse valor conforme necessário */
 }
+.nx-callout-info {
+    background-color: #daf5db !important;  /* verde clarinho */
+    border-left: 4px solid #8bd88b !important;
+    color: #225b22 !important; /* texto em verde escuro */
+  }
+  

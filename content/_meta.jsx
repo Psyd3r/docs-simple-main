@@ -6,6 +6,8 @@ import { LuLayoutPanelLeft } from "react-icons/lu";
 import { FaAlignLeft } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
+import { MdContactSupport } from "react-icons/md";
+import { GrHelpBook } from "react-icons/gr";
 
 
 
@@ -19,7 +21,7 @@ export default {
   index: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <LuRocket style={{marginRight:'3px'}} />
-        <h1 style={{display: 'inline-block'}}>Comece aqui!</h1>
+        <h1 style={{display: 'inline-block'}}>Começando</h1>
       </div>
     ),
     
@@ -66,8 +68,15 @@ export default {
     suporte:(
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
       <MdOutlineSupportAgent style={{marginRight:'3px'}} />
-      <h1 style={{display: 'inline-block'}}>Suporte</h1>
+      <h1 style={{display: 'inline-block'}}>Central de Suporte</h1>
     </div>
     ),
+    canais:(
+      <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+      < GrHelpBook style={{marginRight:'3px'}} />
+      <h1 style={{display: 'inline-block'}}>Ajuda</h1>
+    </div>
+    )
   }
 
+    
