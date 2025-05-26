@@ -12,12 +12,6 @@ import { GrHelpBook } from "react-icons/gr";
 
 
 export default {  
-  elementos:(
-    <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-    <FaAlignLeft style={{marginRight:'3px'}} />
-    <h1 style={{display: 'inline-block'}}>Elementos</h1>
-  </div>
-  ),
   index: (
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
         <LuRocket style={{marginRight:'3px'}} />
