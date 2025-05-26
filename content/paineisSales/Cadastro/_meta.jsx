@@ -4,6 +4,8 @@ import { FaBookBookmark } from "react-icons/fa6";
 import Image from 'next/image'
 import { LuLayoutPanelLeft } from "react-icons/lu";
 import { FaAlignLeft } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+
 import { GrMoney } from "react-icons/gr";
  
 

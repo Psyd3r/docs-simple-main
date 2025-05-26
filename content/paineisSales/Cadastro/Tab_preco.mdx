@@ -1,20 +1,126 @@
-import { Steps } from 'nextra/components'
+import Image from "next/image"
+import precoImage from "../../../image/tab_preco.png"
+import menu01 from "../../../image/tabela-preco/01-menu.png"
+import adicionar02 from "../../../image/tabela-preco/02-adicionar.png"
+import salvar09 from "../../../image/tabela-preco/09-salvar.png"
+import expandir10 from "../../../image/tabela-preco/10-expandir-ver-produtos.png"
+import adicionar11 from "../../../image/tabela-preco/11-adicionar-produto.png"
+import salvargerador14 from "../../../image/tabela-preco/14-salvar-gerador.png"
+import { Steps, ImageZoom, Cards, Callout } from 'nextra/components'
+import { FaPlus, FaListUl } from "react-icons/fa"
+import { LuPencilLine } from "react-icons/lu"
+import { RiDeleteBin7Line } from "react-icons/ri"
+import { IoEyeOutline } from "react-icons/io5"
+import { AiOutlineHistory } from "react-icons/ai"
 
 ## Tabela de Preço
 
-Essa tela  permite a gestão e consulta de tabelas de preço utilizadas no sistema. Essa funcionalidade facilita a organização de listas de preços de produtos e serviços, garantindo um controle eficiente das informações financeiras.
+A tela de **Tabela de Preço** tem como objetivo facilitar a criação e o controle de tabelas comerciais utilizadas nas vendas. Todo o processo é feito de forma intuitiva, guiando o usuário desde a criação até o detalhamento de produtos.
 
-## Funcionalidades Principais
+Ao acessar essa tela, o sistema exibe todas as tabelas já cadastradas com informações organizadas de forma clara, além de permitir o gerenciamento completo de cada item. A criação de novas tabelas pode ser feita de maneira rápida por meio do botão **Adicionar**, disponível na interface principal.
+
+<Callout type="info" emoji="📌">
+  O sistema foi desenhado para que você consiga configurar regras de preço, prazos e condições sem complicações, adaptando facilmente para diferentes cenários e safras.
+</Callout>
+
+---
+
+## Como criar uma Tabela de Preço?
+
 <Steps>
-### Consulta de tabelas de preço:
- 
-Visualização das tabelas cadastradas com detalhes como nome, emissão, safra, data base, moeda e versão.
- 
-### Filtragem e pesquisa
 
-Permite localizar rapidamente uma tabela específica.
+#### Acesse a tela de Tabela de Preço  
+No menu principal do sistema, localize a opção **Tabela de Preço** para iniciar o processo de criação.
 
-### Ações disponíveis
-Edição, exclusão e gestão das tabelas de preços cadastradas
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src={menu01} alt="Acessando Tabela de Preço" width={650} height={400} />
+</div>
+
+#### Clique no botão "Adicionar"  
+Na parte superior da tela, clique em **Adicionar** para abrir o formulário de cadastro da nova tabela.
+
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src= {adicionar02} alt="Botão Adicionar Tabela de Preço" width={200} height={200} />
+</div>
+
+#### Preencha as informações iniciais  
+Informe os dados principais que identificam a tabela: safra, nome, versão e estados em que ela será aplicada.
+
+#### Defina o tipo de juros e moeda  
+Escolha o **tipo de juros** e a **moeda** que regerão as condições comerciais da tabela.
+
+#### Use regras diferenciadas por característica (opcional)  
+Se a **data base** variar por tipo de produto (royalties, germoplasma etc.), marque a opção **Data Base por regra de preço**.  
+O sistema habilitará campos para definir datas específicas para cada característica.
+
+#### Preencha datas base e validade  
+Indique a **data base** e a **data de validade** para a aplicação da tabela de preço no sistema.
+
+#### Configure taxas específicas por característica (opcional)  
+Se as **taxas de juros** também variarem por característica, marque a opção **Taxa por regra de preço**.
+
+#### Insira as taxas de adição e supressão  
+Preencha os campos das **taxas de adição e supressão**, e selecione o **grupo de produto**.
+
+#### Salve a Tabela de Preço  
+Após revisar todos os dados, clique em **Salvar**. A nova tabela será listada e estará pronta para edição e inclusão de produtos.
+
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src={salvar09} alt="Botão Salvar Tabela" width={300} height={200} />
+</div>
+
+#### Visualizar produtos da tabela cadastrada  
+Após salvar a tabela, clique no botão para **expandir** a linha da tabela criada e, em seguida, selecione **Veja os produtos da tabela de preço**.
+
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src={expandir10} alt="Expandir e visualizar produtos da tabela" width={650} height={400} />
+</div>
+
+#### Adicionar produto à tabela  
+Na visualização da tabela expandida, clique em **Adicionar** para inserir um novo produto à tabela.
+
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src={adicionar11} alt="Botão Adicionar Produto" width={650} height={400} />
+</div>
+
+#### Preencha as informações do produto  
+Informe os dados necessários do produto (como nome, unidade de medida, peso, embalagem, germoplasma e royalties).  
+Após isso, clique novamente em **Adicionar** para inserir o item à lista.
+
+#### Adicionar
+Adicionar todos os produtos e clicar em **Adicionar** novamente para finalizar o processo.
+<div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+  <ImageZoom src={salvargerador14} alt="Salvar produtos na tabela de preço" width={650} height={400} />
+</div>
+
 </Steps>
 
+---
+
+## Visual da Tela
+
+Abaixo, temos um exemplo da interface de **Tabela de Preço**, destacando as principais funcionalidades descritas anteriormente.
+
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={precoImage} alt="Tela de tabela de preço" width={650} height={480} />
+</div>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ*clique para dar zoom*
+
+---
+
+## Ações Disponíveis
+
+As ações principais da tela estão organizadas de forma visual para facilitar a interação. Cada botão tem uma função clara e direta, promovendo agilidade e segurança nas operações.
+
+<Cards>
+  <Cards.Card icon={<FaPlus />} title="Adicionar Tabela" href="" />
+  <Cards.Card icon={<IoEyeOutline />} title="Visualizar Produtos" href="" />
+  <Cards.Card icon={<LuPencilLine />} title="Editar Tabela" href="" />
+  <Cards.Card icon={<RiDeleteBin7Line />} title="Excluir Tabela" href="" />
+  <Cards.Card icon={<FaListUl />} title="Detalhes da Tabela" href="" />
+  <Cards.Card icon={<AiOutlineHistory />} title="Histórico de Alterações" href="" />
+</Cards>
+
+<Callout type="success" emoji="✅">
+  Com essas ferramentas, você consegue manter o controle total das políticas de preço da empresa, reduzindo falhas operacionais e aumentando a eficiência na gestão comercial.
+</Callout>

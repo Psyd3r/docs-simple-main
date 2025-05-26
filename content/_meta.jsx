@@ -47,21 +47,7 @@ export default {
       </div>
     ),
     
-    separator2: {type: 'separator'},
 
-    field:(
-      <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-      <FaLocationDot style={{marginRight:'3px'}} />
-      <h1 style={{display: 'inline-block'}}>Field</h1>
-    </div>
-    ),
-    
-    paineisField:(
-      <div style={{display: 'flex', alignItems: 'center', gap:'8px'}}>
-      <LuLayoutPanelLeft style={{marginRight: '3px'}}/>
-      <h1>Menus</h1>
-      </div>
-    ),
 
   separator3: {type: 'separator'},
 

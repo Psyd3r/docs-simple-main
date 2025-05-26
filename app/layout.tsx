@@ -6,6 +6,11 @@ import "./globals.css";
 import logotest from "../../../image/lg-digital.png"
 import Image from 'next/image'
 import {useTheme} from "next-themes";
+import { LuTicketPlus } from "react-icons/lu";
+import { FaWhatsapp } from "react-icons/fa";
+
+
+
 
 
 
@@ -22,14 +27,30 @@ const navbar = (
       <Image src="/lg-digital-light.png" alt="Logo" width={195} height={100} />
       </>
     }
-    projectLink="https://gitlab.com/users/sign_in"
+    projectLink="https://jira.simpleagro.com.br/servicedesk/customer/portal/1"
     projectIcon={
-      <svg width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-      <path d="m231.9 169.8l-94.8 65.6a15.7 15.7 0 0 1-18.2 0l-94.8-65.6a16.1 16.1 0 0 1-6.4-17.3L45 50a12 12 0 0 1 22.9-1.1L88.5 104h79l20.6-55.1A12 12 0 0 1 211 50l27.3 102.5a16.1 16.1 0 0 1-6.4 17.3Z" />
-    </svg>
+      <div style={{
+        display: 'inline-block',
+        fontSize: '23px',
+        lineHeight: '1',
+        marginTop: '5px',
+      }}>
+        <LuTicketPlus />
+      </div>
+    }
+    chatLink="https://wa.me/556496460698"
+    chatIcon={
+        <div style={{
+        display: 'inline-block',
+        fontSize: '23px',
+        lineHeight: '1',
+        marginTop: '5px',
+      }}>
+      <FaWhatsapp />
+      </div>
     }
 
-    // ... Your additional navbar options
+
   />
 );
 const footer = <Footer>MIT {new Date().getFullYear()} © Simple Agro.</Footer>;
