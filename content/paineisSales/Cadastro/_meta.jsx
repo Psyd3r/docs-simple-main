@@ -6,7 +6,8 @@ import { LuLayoutPanelLeft } from "react-icons/lu";
 import { FaAlignLeft } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 
-import { GrMoney } from "react-icons/gr";
+import { MdAttachMoney } from "react-icons/md";
+
  
 
 
@@ -19,7 +20,7 @@ export default {
     ), 
     Tab_preco:(
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-      <GrMoney style={{marginRight:'3px'}} />
+      <MdAttachMoney style={{marginRight:'3px'}} />
       <h1 style={{display: 'inline-block'}}>Tabela de Preço</h1>
     </div>
     ),

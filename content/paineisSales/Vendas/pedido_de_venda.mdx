@@ -1,3 +1,229 @@
+import Image from 'next/image';
+import { ImageZoom } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+import pedidoList from "../../../image/pedido-venda/pedido-listagem.png"
+import itemPedido from "../../../image/pedido-venda/itemPedido.png"
+import Step1Adicionar from "../../../image/pedido-venda/Step1-Adicionar.png"
+import cabe1 from "../../../image/pedido-venda/cabe-1.png"
+import cabe2 from "../../../image/pedido-venda/cabe-2.png"
+import cabe3 from "../../../image/pedido-venda/cabe-3.png"
+import finalizarPedido from "../../../image/pedido-venda/finalizar-pedido.png"
+import listprodutos from "../../../image/pedido-venda/list_produtos.png"
+import novoItem from "../../../image/pedido-venda/novoItempedido.png"
+import finaizardef from "../../../image/pedido-venda/finalizardef.png"
+
+import { Cards } from 'nextra/components'
+import { IoEyeOutline } from "react-icons/io5";
+import { FaCopy, FaThumbsDown } from "react-icons/fa6";
+import { FaRegTrashAlt, FaArrowUp, FaMinusCircle, FaShieldAlt, FaRecycle } from "react-icons/fa";
+import { BiCopy } from "react-icons/bi";
+import { PiClockClockwise } from "react-icons/pi";
+import { HiOutlineStatusOnline } from "react-icons/hi";
 
 
 
+
+# Gestão de Pedidos de Venda
+
+A funcionalidade Pedidos dentro do módulo Sales centraliza toda a operação comercial do sistema, permitindo criar, acompanhar e gerenciar pedidos de forma eficiente.
+
+
+<Callout type="success" emoji="⏩">
+**Quer ir direto ao ponto?** Se você já conhece o sistema e quer apenas saber como criar um pedido na prática, [**clique aqui para ir direto ao tutorial**](#🤔-mas-como-criar-um-pedido-na-prática) de criação passo a passo!
+</Callout>
+
+<Callout type="info" emoji="💡">
+O sistema suporta diferentes tipos de pedidos (desmembrados, substituídos, barter e normais) adaptando-se às necessidades específicas de cada operação comercial.
+</Callout>
+
+## Funcionalidades Principais
+
+### Listagem e Organização
+
+A interface permite visualizar todos os pedidos através de uma listagem organizada com opções de filtros para localização rápida. O sistema divide os pedidos entre **ativos** e **cancelados**, facilitando o gerenciamento e consulta histórica.
+
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={pedidoList} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+
+### Acompanhamento por Status
+
+
+Cada pedido possui controle através de status que indicam sua situação atual no fluxo comercial, permitindo acompanhamento visual do progresso e identificação de pendências.
+
+### Campos de Ações
+
+Cada pedido oferece um menu completo de ações acessível através do ícone de ações na listagem:
+
+<Cards>
+<Cards.Card
+  icon={<IoEyeOutline/>}
+  title="Visualizar"
+  href=""
+/>
+<Cards.Card
+  icon={<FaCopy/>}
+  title="Criar Cópia (Clone)"
+  href=""
+/>
+<Cards.Card
+  icon={<BiCopy/>}
+  title="Copiar pedido (Novo) "
+  href=""
+/>
+<Cards.Card
+  icon={<FaArrowUp/>}
+  title="Reabrir pedido"
+  href=""
+/>
+<Cards.Card
+  icon={<FaThumbsDown/>}
+  title="Reprovar pedido"
+  href=""
+/>
+<Cards.Card
+  icon={<FaMinusCircle/>}
+  title="Cancelar pedido"
+  href=""
+/>
+<Cards.Card
+  icon={<FaShieldAlt/>}
+  title="Liberar desmembrar"
+  href=""
+/>
+<Cards.Card
+  icon={<FaRecycle/>}
+  title="Eliminar Resíduos"
+  href=""
+/>
+<Cards.Card
+  icon={<PiClockClockwise/>}
+  title="Logs de aprovações"
+  href=""
+/>
+
+<Cards.Card
+  icon={<FaRegTrashAlt/>}
+  title="Excluir pedido"
+  href=""
+/>
+
+</Cards>
+
+## Criação de Novos Pedidos
+
+### Formulário de Cabeçalho
+
+O processo de criação inicia com o preenchimento das informações principais do pedido, incluindo dados comerciais, participantes da operação e condições de negociação.
+
+<Steps>
+### Definição das Partes
+Configure as informações dos participantes da operação comercial, incluindo vendedores responsáveis e clientes envolvidos.
+
+### Condições comerciais
+Estabeleça os parâmetros da negociação, incluindo tipo de venda, formas de pagamento e modalidades de entrega.
+
+### Configurações Específicas
+Defina características particulares da operação, como garantias, tabelas de preço e modalidades de venda especiais.
+</Steps>
+
+### Condições de Pagamento
+O sistema permite configurar parcelamentos personalizados através de uma interface que possibilita definir vencimentos e percentuais para cada parcela, adaptando-se a diferentes necessidades de financiamento. As parcelas são geradas automaticamente de acordo com os vencimentos e porcentagens configurados no cabeçalho do pedido.
+
+<Callout type="info" emoji="💰">
+O sistema calcula automaticamente o frete baseado no estado de destino e tipo de embalagem, utilizando tabelas de frete configuráveis por região.
+</Callout>
+
+
+## Opções Especiais
+
+Durante a criação, é possível configurar características específicas como pedidos do tipo **"cancela e substitui"**, emissão de recibos e vincular pedidos relacionados quando necessário.
+<Callout type="warning" emoji="⚠️">
+As opções disponíveis podem variar conforme as configurações e permissões estabelecidas para cada usuário ou empresa.
+</Callout>
+
+## Gestão de Itens do Pedido
+### Visualização dos Itens
+Após acessar um pedido através da ação "Veja os produtos do pedido", é possível gerenciar os itens que compõem a operação comercial. A interface apresenta informações essenciais de cada item como produto, quantidades, preços e descontos aplicados.
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={itemPedido} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+### Adição de Novos Itens
+O sistema permite adicionar produtos ao pedido através de um formulário estruturado que facilita a composição da operação:
+<Steps>
+### Seleção do Produto
+Configure a tabela de preços base e selecione o grupo de produtos para filtrar as opções disponíveis. Em seguida, escolha o produto específico desejado.
+### Definição de preços
+Estabeleça o preço unitário do item e aplique descontos percentuais quando necessário, com cálculo automático dos valores finais.
+### Quantidades
+Defina a quantidade do produto, com visualização imediata do total do item baseado no preço e desconto configurados.
+
+</Steps>
+
+## Fluxos de Aprovação
+O sistema oferece fluxos de aprovação configuráveis que podem ser estabelecidos conforme critérios como valor, cliente, produto ou hierarquia organizacional, garantindo governança adequada sobre as operações comerciais.
+
+## 🤔 Mas como criar um pedido na prática?
+
+Agora que você conhece as funcionalidades, vamos ao passo a passo prático para criar seu primeiro pedido no sistema:
+
+<Callout type="default" emoji="⚙️">
+**Importante:** Os campos e opções apresentados podem variar conforme as regras de negócio e configurações específicas da sua empresa. O processo base permanece o mesmo, mas a interface se adapta às suas necessidades.
+</Callout>
+
+<Steps>
+### Iniciando a Criação
+Acesse o módulo **Sales > Pedidos** e clique no botão **"Adicionar"** no canto superior direito da tela.
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={Step1Adicionar} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+### Preenchendo o Cabeçalho
+Configure as informações essenciais do pedido incluindo filial, safra, cliente, propriedade, vendedor e tipo de frete. A tabela de preços será automaticamente filtrada de acordo com a filial e o estado da propriedade selecionada.
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={cabe1} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={cabe2} alt="Tela de Pedidos" width={600} height={500} />
+  <div style={{ marginTop: '0rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+  <ImageZoom src={cabe3} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+</div>
+### Definindo Condições Comerciais
+Estabeleça os parâmetros da negociação configurando tipo de venda, formas de pagamento e modalidade de venda adequada à operação.
+
+### Configurando Parcelamento
+Configure os vencimentos e porcentagens para cada parcela quando necessário. O sistema gerará automaticamente as parcelas de acordo com os vencimentos e percentuais definidos no cabeçalho do pedido.
+
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={finalizarPedido} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+
+### Adicionando Produtos
+Após salvar o cabeçalho, acesse "Veja os produtos do pedido" para gerenciar os itens. É possível adicionar múltiplos produtos ao pedido, editar valores de preço base e tratamentos específicos quando aplicável, além de definir quantidades e descontos individuais.
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={listprodutos} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ*Figura x*
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={itemPedido} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ*Figura x*
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={novoItem} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ*Figura x*
+
+### Finalizando
+Com todos os itens incluídos, utilize o botão "Finalizar Pedido" para concluir a operação. O sistema calculará automaticamente o frete baseado no estado de destino e tipo de embalagem configurado.
+<div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+  <ImageZoom src={finaizardef} alt="Tela de Pedidos" width={600} height={500} />
+</div>
+</Steps>
+<Callout type="info" emoji="💡">
+**Dica importante:** Sempre selecione primeiro o cliente, pois isso facilitará o preenchimento automático de informações como propriedade e condições comerciais pré-configuradas.
+</Callout>
+<Callout type="warning" emoji="⚠️">
+Certifique-se de salvar o cabeçalho antes de adicionar produtos. Sem isso, não será possível incluir itens no pedido.
+</Callout>

@@ -8,6 +8,8 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
 import { MdContactSupport } from "react-icons/md";
 import { GrHelpBook } from "react-icons/gr";
+import { BiSolidMegaphone } from "react-icons/bi";
+
 
 
 
@@ -53,8 +55,8 @@ export default {
     ),
     canais:(
       <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
-      < GrHelpBook style={{marginRight:'3px'}} />
-      <h1 style={{display: 'inline-block'}}>Ajuda</h1>
+      < BiSolidMegaphone style={{marginRight:'3px'}} />
+      <h1 style={{display: 'inline-block'}}>Canais Comunicação</h1>
     </div>
     )
   }
