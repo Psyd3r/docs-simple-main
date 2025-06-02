@@ -1,4 +1,4 @@
-import { FaHome, FaPlus, FaUserEdit   } from 'react-icons/fa'
+import { FaHome, FaPlus, FaUserEdit, FaWallet    } from 'react-icons/fa'
 import { LuRocket } from "react-icons/lu"
 import { FaBookBookmark } from "react-icons/fa6";
 import Image from 'next/image'
@@ -23,6 +23,12 @@ export default {
       <MdAttachMoney style={{marginRight:'3px'}} />
       <h1 style={{display: 'inline-block'}}>Tabela de Preço</h1>
     </div>
+    ),
+    Cart_de_Cliente:(
+        <div style={{ display: 'flex', alignItems: 'center', gap:'8px'}}>
+        <FaWallet style={{marginRight:'3px'}} />
+        <h1 style={{display: 'inline-block'}}>Carteira de Cliente</h1>
+      </div>
     ),
     
   }
